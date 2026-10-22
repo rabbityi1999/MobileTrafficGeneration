@@ -1,0 +1,2 @@
+# Preserve the exact bytes recorded in work4/SOURCE_MANIFEST.json on all platforms.
+work4/** -text

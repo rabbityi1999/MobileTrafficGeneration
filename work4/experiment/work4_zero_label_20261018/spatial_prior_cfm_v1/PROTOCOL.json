@@ -1,0 +1,98 @@
+{
+  "created": "2026-10-20T17:11:10.157793+08:00",
+  "status": "DESIGN_FROZEN_BEFORE_NEW_SPATIAL_MODEL_FITS",
+  "identity": "source spatial generalization of known Gaussian-prior CFM and coordinate ablations; not new-method validation",
+  "parents": {
+    "experiment/work4_zero_label_20261018/spatial_dev_v1/model_inputs/fold0.npz": "f2a26827d26246ff344edc76acd7a731d59a617ee4ee2ebecda2fb6fd7fef0d4",
+    "experiment/work4_zero_label_20261018/spatial_dev_v1/model_inputs/fold1.npz": "f1cc67974a67abbc908ba9ca7f755b764d0866737f735caf8de2144639f562d0",
+    "experiment/work4_zero_label_20261018/spatial_dev_v1/model_inputs/fold2.npz": "94d313a8d10f9106b9567c33340dd461d7e0306e160984cacc79e4b539aa469b",
+    "experiment/work4_zero_label_20261018/spatial_dev_v1/model_inputs/fold3.npz": "ce38f21df89f0021fe9fb34b9de170b15c1211b82fec1fa8af787f751dd241ca"
+  },
+  "outer_roles": "reuse E30 four source median-coordinate quadrants and fixed128 queries/fold; entire held quadrant labels excluded from training/calibration/selection; existing source development, not blind city",
+  "fit_arrays": [
+    "x_outer_train",
+    "y_outer_train",
+    "rows_outer_train",
+    "x_query",
+    "rows_query"
+  ],
+  "forbidden_producer_paths": [
+    "spatial_dev_v1/evaluation_only/*",
+    "target city arrays",
+    "source_only.npz query label arrays"
+  ],
+  "arms": [
+    "sourceGaussian_CFM_zero",
+    "sourceGaussian_CFM_satellite128_keep_coordinates_zero",
+    "sourceGaussian_CFM_all130"
+  ],
+  "training": {
+    "new_fits": 24,
+    "seed": 1,
+    "steps_per_fit": 20000,
+    "architecture_parameters": 167016,
+    "optimizer": "same AdamW lr3e-4,wd1e-4,batch128,clip1",
+    "selection": "none; all arms/folds report; no outer-query tuning",
+    "source_prior": "fit mean and covariance anew within each nonheld source fold, never full-source covariance",
+    "effective_input_note": "same architecture but zero/removed-coordinate arms constrain input freedom"
+  },
+  "sampling": {
+    "members": 200,
+    "noise_seeds": [
+      6101901,
+      6101902,
+      6101903
+    ],
+    "Euler": 20,
+    "batch": 16
+  },
+  "controls": [
+    "whole nonheld source empirical law, exact and matchingM200",
+    "no-training fold-source Gaussian",
+    "inner-selected existing Ridge residual satellite/all, exact finite-pool and matchingM200"
+  ],
+  "metrics": [
+    "sample and fairCRPS",
+    "90% coverage and width",
+    "sample mean MAE",
+    "source-defined temporal lag1/24/48 and weekday/weekend diagnostics",
+    "cost"
+  ],
+  "preprocessing_boundary": "same historical source static encoder/features as E30, which may include held source images and static standardization; no strict train-images-only inductive claim. This is still source development, not independent-city confirmation.",
+  "resource_gate_before_candidate_spatial_results": "For any proposed new candidate, require both business macroCRPS >=2% better than strongest same-information control and wins>=3/4 source regions before broad training-seed/target expansion. All failed arms retained. This resource gate does not establish statistical significance.",
+  "gate_applicability": "known Gaussian-prior baseline is being characterized; passing is not novelty or cross-city proof",
+  "resources": "one GPU only after fresh no-process/memory/utilization checks; no old queues, no repeated completed Gaussian-prior random-split fits",
+  "current_execution": "FROZEN_BEFORE_TRAINING",
+  "created_execution": "2026-10-20T19:04:35.561583+00:00",
+  "target_label_budget": 0,
+  "source_design_sha256": "789129ab57f31f51fbd66bbb03579a938cd83e1dc0850d53d6160896be5ffc35",
+  "deployed_packet_keys": [
+    "factors",
+    "means",
+    "rows_outer_train",
+    "rows_query",
+    "x_outer_train",
+    "x_query",
+    "y_outer_train"
+  ],
+  "model_arms": [
+    "zero",
+    "satellite",
+    "all"
+  ],
+  "arm_mapping": {
+    "zero": "sourceGaussian_CFM_zero",
+    "satellite": "sourceGaussian_CFM_satellite128_keep_coordinates_zero",
+    "all": "sourceGaussian_CFM_all130"
+  },
+  "output_contract": {
+    "fits": 24,
+    "forecasts": 72,
+    "shape": [
+      128,
+      200,
+      168
+    ]
+  },
+  "evaluation_gate": "No outer query scoring before all 72 CFM forecasts plus required matched controls are sealed. Source-only control generation may follow CFM completion; no target scoring."
+}

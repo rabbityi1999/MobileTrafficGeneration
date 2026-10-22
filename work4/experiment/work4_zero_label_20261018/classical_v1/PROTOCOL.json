@@ -1,0 +1,49 @@
+{
+  "status": "FROZEN_BEFORE_COMPUTATION",
+  "created": "2026-10-18T12:33:28.843908+00:00",
+  "source_package_sha256": "50e38f76786fff9f026a747cdff1a01ef76eaecec7fc138301bbe4ad3b14d036",
+  "channels": [
+    "call_in",
+    "call_out"
+  ],
+  "fit_count": 3156,
+  "calibration_count": 789,
+  "dev_selection": "same first128 source validation rows as stage0 CFM",
+  "split_seed": 6101801,
+  "sample_seed": 6101802,
+  "permutation_seed": 6101803,
+  "sample_count": 20,
+  "alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "views": [
+    "satellite",
+    "coordinates",
+    "all",
+    "all_permuted_fit_labels"
+  ],
+  "normalization": "re-standardize selected x using regression fit subset only; source profiles retain frozen per-row minmax; no target data",
+  "residuals": "held-out source calibration curves minus source fitted conditional mean; draw whole168h two-channel residual from one region, fixed paired indices across alpha/views",
+  "permutation_control": "shuffle fit-label rows only, preserving each complete two-channel curve; calibration keeps true paired source residuals; this diagnoses dependence of this regression on fitted relationships, not a claim of all source information removal",
+  "baselines": [
+    "SourceMean(all3945)",
+    "SourceEmpiricalFull(all3945)",
+    "SourceEmpiricalCalibration(789; paired residual pool control)"
+  ],
+  "selection": "minimum source dev sampleCRPS separately by channel and feature view; ties smaller alpha; results are selected dev estimates, not generalization tests",
+  "metrics": [
+    "sampleCRPS",
+    "sample-meanMAE",
+    "90%coverage",
+    "90%width",
+    "clipping_fraction"
+  ],
+  "uncertainty": "128 correlated source regions, one predetermined empirical Monte Carlo draw set, no independent-city CI",
+  "model_identity": "ordinary Ridge and residual resampling, no novelty claim",
+  "target_labels": false,
+  "target_inference": false,
+  "cost": "local CPU4threads; no GPU allocation"
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "Reviewed source-code snapshot; private datasets, credentials and results are not exported",
+  "files": [
+    {
+      "source": "experiment/work4_zero_label_20261018/train_stage0.py",
+      "published": "work4/experiment/work4_zero_label_20261018/train_stage0.py",
+      "sha256": "6ecc09ee126647818aac66f043cc3cae86ae739ea71204f729ed6934e7abdee3"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/classical_v1/run_classical.py",
+      "published": "work4/experiment/work4_zero_label_20261018/classical_v1/run_classical.py",
+      "sha256": "f50ddba1dbaa0a48e279901e02a1e1df09e9dcad8d49dea03a84cd8ffbc8a7c2"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/classical_v1/PROTOCOL.json",
+      "published": "work4/experiment/work4_zero_label_20261018/classical_v1/PROTOCOL.json",
+      "sha256": "64a5f451cd76705f5b1898ce1f9950ba29260322412e266107608968b3ce4e22"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/gaussian_prior_cfm_v1/prior_ops.py",
+      "published": "work4/experiment/work4_zero_label_20261018/gaussian_prior_cfm_v1/prior_ops.py",
+      "sha256": "b9c57c6f26cc92c4eb996f37ca9458ecf8ed4311d64ef115ec90360d3f99302c"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/spatial_ops.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/spatial_ops.py",
+      "sha256": "9f5bbb09db49715f1d362047bda4f34f67b5b53191925540de4d69c5726aa562"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/selftest.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/selftest.py",
+      "sha256": "4150915eb128debaf0a312fedf86168738c2eda4b63a30f5298491c28982ddf5"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/PROTOCOL.json",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/PROTOCOL.json",
+      "sha256": "45d6112527f8cf213e79b1ec7ad2d53e27f2b52ae917b6be2eed22afd8ded97a"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/assessment_v1/metrics.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/assessment_v1/metrics.py",
+      "sha256": "eebf84585c9e2d313a543cc0d2c6cfc4e8dd2deb21fb95a5bd8992db5e63a8ca"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/worker.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/worker.py",
+      "sha256": "35385195bb24bcda26e06539a616cc76bdadde9f9dc429d1b9e64142620e1edb"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/spatial_ops.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/spatial_ops.py",
+      "sha256": "9f5bbb09db49715f1d362047bda4f34f67b5b53191925540de4d69c5726aa562"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/prior_ops.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/prior_ops.py",
+      "sha256": "b9c57c6f26cc92c4eb996f37ca9458ecf8ed4311d64ef115ec90360d3f99302c"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/model_reference.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/model_reference.py",
+      "sha256": "6ecc09ee126647818aac66f043cc3cae86ae739ea71204f729ed6934e7abdee3"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/gpu_guard_reference.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/gpu_guard_reference.py",
+      "sha256": "8269e4e604d1c518795c1ae632773a4db85d226c97a8ac2df9d3fa955437eb87"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/dispatch.py",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/dispatch.py",
+      "sha256": "442ac4bf32cdf30f3dd848b8c49f4aa0206ac9759db37721ce33914b170c169f"
+    },
+    {
+      "source": "experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/CONFIG.json",
+      "published": "work4/experiment/work4_zero_label_20261018/spatial_prior_cfm_v1/remote_package/CONFIG.json",
+      "sha256": "45d6112527f8cf213e79b1ec7ad2d53e27f2b52ae917b6be2eed22afd8ded97a"
+    },
+    {
+      "source": "research/work4_cross_city_adaptation/ars_pipeline/phase1_scoping/objective_check.py",
+      "published": "work4/research/work4_cross_city_adaptation/ars_pipeline/phase1_scoping/objective_check.py",
+      "sha256": "4ff88ae6e5a58e89a2902d02ace76be50ae9b7aa44c10c7cb13975846dc8a815"
+    }
+  ]
+}
